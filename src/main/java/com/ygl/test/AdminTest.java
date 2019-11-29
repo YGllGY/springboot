@@ -21,6 +21,7 @@ public class AdminTest {
     public void test1(){
         List<Admin> list = adminService.selectAllAdmin();
         for (Admin admin : list) {
+
             System.out.println(admin);
         }
 
