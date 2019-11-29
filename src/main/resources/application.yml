@@ -1,0 +1,33 @@
+server:
+  port: 8989
+  context-path: /ems
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/ygl
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+    date-format: yyyy-MM-dd
+  aop:
+    proxy-target-class: true
+  jackson:
+    date-format: yyyy-MM-dd
+
+mybatis:
+  type-aliases-package: com.ygl.entity
+  mapper-locations: classpath:com/ygl/mapper/*Mapper.xml
+
+#logging:
+#  level:
+#    root: info
+#    com.ygl.dao: debug
+#    console: "[%p]:%m%n"
